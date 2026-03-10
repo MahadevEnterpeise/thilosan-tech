@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thilosan Tech Studio</title>
+    <style>
+        :root {
+            --tech-blue: #0074d9;
+            --dark-navy: #001f3f;
+            --accent-cyan: #39cccc;
+            --light-blue: #7fdbff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Header --- */
+        header {
+            background: linear-gradient(120deg, var(--dark-navy) 0%, var(--tech-blue) 100%);
+            color: #ffffff;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-bottom: 3px solid var(--accent-cyan);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: var(--light-blue);
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* --- Services Section --- */
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: var(--dark-navy);
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap; /* Crucial for mobile responsiveness */
+            justify-content: center;
+            gap: 25px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pack {
+            background: white;
+            flex: 1;
+            min-width: 280px; /* Forces stacking on small screens */
+            max-width: 350px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .pack:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 116, 217, 0.2);
+        }
+
+        .pack h4 { margin-top: 0; color: var(--dark-navy); font-size: 1.4rem; }
+        .pack ul { list-style: none; padding: 0; text-align: center; margin-bottom: 30px; }
+        .pack li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+
+        /* --- Buttons --- */
+        .btn {
+            text-decoration: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: auto; /* Pushes button to bottom */
+        }
+
+        .btn-basic { background-color: var(--tech-blue); }
+        .btn-gold { background-color: #002ed5; }
+        .btn-pro { background-color: #00007e; }
+        
+        .btn:hover { opacity: 0.9; transform: scale(1.05); }
+
+        /* --- About/Contact --- */
+        .contact-section {
+            background: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contact-links a {
+            margin: 0 10px;
+            color: var(--tech-blue);
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Desktop Adjustment */
+        @media (min-width: 768px) {
+            header { flex-direction: row; justify-content: space-between; padding: 1.5rem 5%; }
+            .logo { margin-bottom: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Thilosan Tech Studio</div>
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <h2 class="section-title" id="services">Pricing Packages</h2>
+    
+    <div class="services-container">
+        <div class="pack">
+            <h4>Basic Pack</h4>
+            <ul>
+                <li>1 to 3 page sites</li>
+                <li>Simple UI</li>
+                <li>75% payment upfront</li>
+                <li>Showcase sites</li>
+            </ul>
+            <a class="btn btn-basic" href="https://wa.me/94743682842?text=I%20want%20the%20Basic%20Pack">Book Now $120</a>
+        </div>
+
+        <div class="pack">
+            <h4>Gold Pack</h4>
+            <ul>
+                <li>5 to 7 page sites</li>
+                <li>Dynamic Elements</li>
+                <li>50% payment upfront</li>
+                <li>E-commerce Ready</li>
+            </ul>
+            <a class="btn btn-gold" href="https://wa.me/94743682842?text=I%20want%20the%20Gold%20Pack">Book Now $280</a>
+        </div>
+
+        <div class="pack">
+            <h4>Pro Pack</h4>
+            <ul>
+                <li>Unlimited pages</li>
+                <li>Custom Backend </li>
+                <li>Milestone Payments</li>
+                <li>Full Support</li>
+            </ul>
+            <a class="btn btn-pro" href="https://wa.me/94743682842?text=I%20want%20the%20Pro%20Pack">Book Now $490</a>
+        </div>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <h4>About Us</h4>
+        <p style="max-width: 600px; margin: 0 auto 20px;">
+            We offer a competitive edge in web development. As a growing startup, we focus on high-speed delivery and professional presence. This site itself is a showcase of our speed and efficiency!
+        </p>
+        <div class="contact-links">
+            <a href="mailto:wuzoonofficial@gmail.com?subject=Project%20Inquiry">E-mail</a>
+            <a href="https://wa.me/94743682842">WhatsApp</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2026 All Rights Reserved By Thilosan Tech Studio
+</footer>
+
+</body>
+</html>
